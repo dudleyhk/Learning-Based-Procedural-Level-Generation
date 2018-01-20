@@ -6,8 +6,10 @@
 #include "InitGLEW.h"
 
 
+using namespace Core::Init;
 
-void Core::Init::InitGLEW::Init()
+
+void InitGLEW::Init()
 {
 	glewExperimental = true;
 	if(glewInit() == GLEW_OK)
@@ -23,5 +25,4 @@ void Core::Init::InitGLEW::Init()
 	{
 		std::cout << "ERROR: Glew 4.3 not supported" << std::endl;
 	}
-
 }

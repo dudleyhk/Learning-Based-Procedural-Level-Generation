@@ -3,15 +3,12 @@
 
 
 */
-#include "Models.h"
+#include "Model.h"
 
 
 using namespace Rendering;
 using namespace Models;
 
-
-Model::Model()
-{}
 
 Model::~Model()
 {

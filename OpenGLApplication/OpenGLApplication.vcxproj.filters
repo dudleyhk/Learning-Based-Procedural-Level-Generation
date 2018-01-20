@@ -46,6 +46,15 @@
     <Filter Include="Managers\Source Files">
       <UniqueIdentifier>{70fe3449-adb2-4ddb-8917-c2b774ed0826}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rendering\Models\Header Files">
+      <UniqueIdentifier>{e40a3fe4-15de-4141-8cad-7fde083e4c59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Models\Source Files">
+      <UniqueIdentifier>{9d3be4d6-54b9-471e-80e1-10d2542c4c7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Texture">
+      <UniqueIdentifier>{d0977275-63fa-4bdc-bf8b-4b9a5b704127}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Init\InitGLEW.cpp">
@@ -55,12 +64,6 @@
       <Filter>Core\Init\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Rendering\Models\Models.cpp">
-      <Filter>Rendering\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="Rendering\Models\Triangle.cpp">
-      <Filter>Rendering\Models</Filter>
-    </ClCompile>
     <ClCompile Include="Managers\ShaderManager.cpp">
       <Filter>Managers\Source Files</Filter>
     </ClCompile>
@@ -69,6 +72,18 @@
     </ClCompile>
     <ClCompile Include="Managers\SceneManager.cpp">
       <Filter>Managers\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\Triangle.cpp">
+      <Filter>Rendering\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\Quad.cpp">
+      <Filter>Rendering\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\Model.cpp">
+      <Filter>Rendering\Models\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Texture\Texture.cpp">
+      <Filter>Rendering\Texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,12 +114,6 @@
     <ClInclude Include="Core\Core\VertexFormat.h">
       <Filter>Rendering</Filter>
     </ClInclude>
-    <ClInclude Include="Rendering\Models\Models.h">
-      <Filter>Rendering\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="Rendering\Models\Triangle.h">
-      <Filter>Rendering\Models</Filter>
-    </ClInclude>
     <ClInclude Include="Managers\ShaderManager.h">
       <Filter>Managers\Header Files</Filter>
     </ClInclude>
@@ -113,6 +122,18 @@
     </ClInclude>
     <ClInclude Include="Managers\ModelsManager.h">
       <Filter>Managers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Models\Triangle.h">
+      <Filter>Rendering\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Models\Quad.h">
+      <Filter>Rendering\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Models\Model.h">
+      <Filter>Rendering\Models\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Texture\Texture.h">
+      <Filter>Rendering\Texture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

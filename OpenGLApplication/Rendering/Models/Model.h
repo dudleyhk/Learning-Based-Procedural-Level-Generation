@@ -8,7 +8,8 @@
 
 #include "Rendering/IGameObject.h"
 
-
+// TODO: Models use the same program (Shader) rather than each being assigned a new one. 
+// TODO: Change map to vector. Maps are slow.
 
 namespace Rendering
 {
@@ -16,8 +17,8 @@ namespace Rendering
 	{
 		class Model : public IGameObject
 		{
-		public:
-			Model();
+		public: 
+			Model() = default;
 			virtual ~Model();			
 
 			virtual void Draw()    override;

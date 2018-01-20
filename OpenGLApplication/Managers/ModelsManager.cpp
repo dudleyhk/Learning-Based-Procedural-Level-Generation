@@ -1,9 +1,12 @@
 /*
 
+
+
 */
+#include "Core/Core/ContainerUtilities.h"
 #include "ModelsManager.h"
 
-
+#include "Rendering\Texture\Texture.h"
 
 using namespace Managers;
 using namespace Rendering;
@@ -12,40 +15,54 @@ using namespace Rendering;
 
 ModelsManager::ModelsManager()
 {
-
+	
 	Models::Triangle* triangle = new Models::Triangle();
-	triangle->SetProgram(ShaderManager::GetShader("ColorShader"));
+	triangle->SetProgram(ShaderManager::GetShader("ColourShader"));
 	triangle->Create();
-	gameModels["Triangle"] = triangle;
+	gameModels["Triangle"].reset(triangle);
+
+	Models::Quad* quad = new Models::Quad();
+	quad->SetProgram(ShaderManager::GetShader("ColourShader"));
+	quad->Create();
+	gameModels["Quad"].reset(quad);
+
+	Textures::Texture textureLoader;
+	textureLoader.LoadTexture("..\\Resources\\mario1-1.png", 10, 5);
+
+	
 
 }
 
 ModelsManager::~ModelsManager()
 {
-	for(auto model : gameModels)
-	{
-		delete model.second;
-	}
 	gameModels.clear();
 }
 
 void ModelsManager::DeleteModel(const std::string& gameModelName)
 {
-	// TODO : Use algorithm utilities to check if this is valid
-	IGameObject* model = gameModels[gameModelName];
+	if(!Algorithms::Map::contains(gameModels, gameModelName))
+	{
+		std::cout << "ERROR: Attempting to get invalid gamemodel " << gameModelName << std::endl;
+		return;
+	}
+
+	IGameObject* model = gameModels[gameModelName].release();
 	model->Destroy();
 	gameModels.erase(gameModelName);
 }
 
 const IGameObject& ModelsManager::GetModel(const std::string& gameModelName) const
 {
-	// TODO : Use algorithm utilities to check if this is valid
-	return (*gameModels.at(gameModelName));
+	if(!Algorithms::Map::contains(gameModels, gameModelName))
+	{
+		std::cout << "ERROR: Attempting to get invalid gamemodel " << gameModelName << std::endl;
+	}
+	return *gameModels.at(gameModelName).get();
 }
 
 void ModelsManager::Update()
 {
-	for(auto model : gameModels)
+	for(const auto& model : gameModels)
 	{
 		model.second->Update();
 	}
@@ -53,7 +70,7 @@ void ModelsManager::Update()
 
 void ModelsManager::Draw()
 {
-	for(auto model : gameModels)
+	for(const auto& model : gameModels)
 	{
 		model.second->Draw();
 	}

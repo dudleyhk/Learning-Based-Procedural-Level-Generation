@@ -15,7 +15,7 @@ namespace Core
 		virtual void NotifyDisplayFrame() = 0;
 		virtual void NotifyEndFrame()     = 0;
 		virtual void NotifyResize(int width, int height,
-								   int previousWidth, int previousHeight) = 0;
+								  int previousWidth, int previousHeight) = 0;
 	};
 
 	inline IListener::~IListener()

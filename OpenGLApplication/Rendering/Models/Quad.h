@@ -7,19 +7,23 @@
 #include "Model.h"
 
 
+
 namespace Rendering
 {
 	namespace Models
 	{
-		class Triangle : public Models::Model
+		class Quad : public Models::Model
 		{
 		public:
-			Triangle();
-			~Triangle();
+			Quad()  = default;
+			~Quad() = default;
 
 			void Create();
-			virtual void Update() override final;
 			virtual void Draw() override final;
+			virtual void Update() override final;
+
+		private:
+
 		};
 	}
 }

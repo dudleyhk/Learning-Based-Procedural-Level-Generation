@@ -1,5 +1,5 @@
 /*
-
+	
 
 
 */
@@ -13,7 +13,7 @@ SceneManager::SceneManager()
 	glEnable(GL_DEPTH_TEST);
 
 	shader_manager = std::make_unique<ShaderManager>();
-	shader_manager->CreateProgram("ColorShader",
+	shader_manager->CreateProgram("ColourShader",
 								  "Shaders\\VertexShaders\\VertexShader.glsl",
 								  "Shaders\\FragmentShaders\\FragmentShader.glsl");
 

@@ -8,10 +8,12 @@
 
 #pragma once
 #include <map>
+#include <memory>
 
 #include "ShaderManager.h"
 #include "Rendering/IGameObject.h"
 #include "Rendering/Models/Triangle.h"
+#include "Rendering/Models/Quad.h"
 
 
 namespace Managers
@@ -28,6 +30,6 @@ namespace Managers
 		const Rendering::IGameObject& GetModel(const std::string& gameModelName) const;
 
 	private:
-		std::map<std::string, Rendering::IGameObject*> gameModels;
+		std::map<std::string, std::unique_ptr<Rendering::IGameObject>> gameModels;
 	};
 }
