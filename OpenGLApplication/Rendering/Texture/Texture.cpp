@@ -8,7 +8,6 @@
 
 #include "Dependencies\GL\freeglut.h"
 #include "Dependencies\GL\glut.h"
-#include "Dependencies\PNG\png.h"
 
 #include "Texture.h"
 
@@ -19,7 +18,7 @@ using namespace Rendering::Textures;
 
 
 
-GLuint Texture::LoadTexture(const std::string & filename, const int & width, const int & height)
+GLuint Texture::LoadTexture(const std::string& filename, const int& width, const int& height)
 {
 	//// header for testing if it is a png (png_byte is a typedef for below but erroring)
 	//png_byte header[8];
@@ -55,8 +54,5 @@ GLuint Texture::LoadTexture(const std::string & filename, const int & width, con
 	//	fclose(file_ptr);
 	//	return TEXTURE_LOAD_ERROR;
 	//}
-
-
-
 	return 0;
 }

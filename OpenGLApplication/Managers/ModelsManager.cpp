@@ -26,12 +26,11 @@ ModelsManager::ModelsManager()
 	quad->Create();
 	gameModels["Quad"].reset(quad);
 
-	Textures::Texture textureLoader;
-	textureLoader.LoadTexture("..\\Resources\\mario1-1.png", 10, 5);
-
-	
-
+	//Textures::Texture textureLoader;
+	//textureLoader.LoadTexture("..\\Resources\\mario1-1.png", 10, 5);
 }
+
+
 
 ModelsManager::~ModelsManager()
 {

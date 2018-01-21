@@ -3,7 +3,13 @@
 
 
 */
+#include <fstream>
+
 #include "SceneManager.h"
+
+#include "CSVIterator.h"
+
+
 
 using namespace Managers;
 
@@ -25,6 +31,24 @@ SceneManager::SceneManager()
 void SceneManager::NotifyBeginFrame()
 {
 	models_manager->Update();
+
+	auto filename = "..//Resources//Totals.csv";
+	std::ifstream file(filename);
+	if(!file.good())
+	{
+		std::cout << "ERROR: CSV file '" << filename << "' empty" << std::endl;
+	}
+
+	int i = 0;
+	// TODO: Create an interface class to handle the level generation
+	for(CSVManager::CSVIterator iter(file); iter != CSVManager::CSVIterator(); iter++)
+	{
+		auto row = *iter;
+		for(auto i = 0; i < row.Size(); i++)
+		{
+			std::cout << "Cell - " << row[i] << std::endl;
+		}
+	}
 }
 
 void SceneManager::NotifyDisplayFrame()
