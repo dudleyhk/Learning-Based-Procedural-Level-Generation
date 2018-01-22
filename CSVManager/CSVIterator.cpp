@@ -23,7 +23,7 @@ CSVIterator& CSVIterator::operator++()
 		// Stream the read line into the current Rows::data vector.
 		if(!((*str) >> row))
 		{
-			str == nullptr;
+			str = nullptr;
 		}
 	}
 	return *this;
