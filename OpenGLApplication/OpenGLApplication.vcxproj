@@ -74,6 +74,7 @@
     <IncludePath>$(ProjectDir);$(SolutionDir)CSVManager;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(ProjectDir);$(SolutionDir)CSVManager;$(IncludePath)</IncludePath>
@@ -84,6 +85,7 @@
     <IncludePath>$(ProjectDir);$(SolutionDir)CSVManager;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(ProjectDir);$(SolutionDir)CSVManager;$(IncludePath)</IncludePath>
