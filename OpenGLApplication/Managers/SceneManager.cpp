@@ -38,7 +38,7 @@ void SceneManager::NotifyBeginFrame()
 	{
 		std::cout << "ERROR: CSV file '" << filename << "' empty" << std::endl;
 	}
-
+	
 	int i = 0;
 	// TODO: Create an interface class to handle the level generation
 	for(CSVManager::CSVIterator iter(file); iter != CSVManager::CSVIterator(); iter++)

@@ -58,6 +58,7 @@ artifacts/
 *.idb
 *.pdb
 *.exe
+*.lib
 *.pgc
 *.pgd
 *.rsp
