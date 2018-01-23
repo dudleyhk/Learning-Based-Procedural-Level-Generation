@@ -122,12 +122,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CSVIterator.cpp" />
+    <ClCompile Include="CSVReadIterator.cpp" />
     <ClCompile Include="CSVRow.cpp" />
+    <ClCompile Include="CSVWrite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CSVIterator.h" />
+    <ClInclude Include="CSVReadIterator.h" />
     <ClInclude Include="CSVRow.h" />
+    <ClInclude Include="CSVWrite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -16,11 +16,10 @@ namespace CSVManager
 		CSVRow()  = default;
 		~CSVRow() = default;
 
-		std::string const& operator[](unsigned int index) const;
-		const unsigned int Size() const;
+		std::string const& operator[](std::size_t index) const;
+		const std::size_t Size() const;
 
 		void ReadNextRow(std::istream& str);
-
 
 	private:
 		std::vector<std::string> data;

@@ -10,17 +10,17 @@
 using namespace CSVManager;
 
 
-std::string const& CSVRow::operator[](unsigned int index) const
+std::string const& CSVRow::operator[](std::size_t index) const
 {
-	return data[static_cast<std::size_t>(index)];
+	return data[index];
 }
 
 
 
-const unsigned int CSVRow::Size() const
+const std::size_t CSVRow::Size() const
 {
-	return static_cast<unsigned int>(data.size());
-}
+	return data.size();
+} 
 
 
 

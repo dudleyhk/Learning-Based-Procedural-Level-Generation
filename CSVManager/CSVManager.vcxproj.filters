@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CSVIterator.cpp">
+    <ClCompile Include="CSVRow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CSVRow.cpp">
+    <ClCompile Include="CSVWrite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVReadIterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +29,10 @@
     <ClInclude Include="CSVRow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CSVIterator.h">
+    <ClInclude Include="CSVWrite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVReadIterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

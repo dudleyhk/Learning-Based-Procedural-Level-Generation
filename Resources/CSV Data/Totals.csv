@@ -1,0 +1,16 @@
+,Mud,Grass,Water,Wall,Air
+Mud Right,90,0,0,1,11
+Mud Up,0,66,36,0,0
+Mud Forward,90,0,1,1,10
+Grass Right,0,53,3,1,12
+Grass Up,0,1,5,5,58
+Grass Forward,0,47,10,1,11
+Water Right,4,8,42,8,20
+Water Up,1,1,32,0,48
+Water Forward,3,11,53,1,14
+Wall Right,0,0,0,0,8
+Wall Up,1,1,3,3,0
+Wall Forward,0,2,0,3,3
+Air Right,2,0,0,0,12
+Air Up,0,0,4,0,10
+Air Forward,1,0,5,0,8
