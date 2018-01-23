@@ -6,7 +6,7 @@
 #pragma once
 #include <vector>
 
-#include "Rendering/IGameObject.h"
+#include "..\IGameObject.h"
 
 // TODO: Models use the same program (Shader) rather than each being assigned a new one. 
 // TODO: Change map to vector. Maps are slow.

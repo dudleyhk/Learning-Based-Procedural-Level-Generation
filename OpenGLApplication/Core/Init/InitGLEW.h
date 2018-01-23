@@ -6,8 +6,8 @@
 #pragma once
 #include <iostream>
 
-#include "Dependencies\GL\glew.h"
-#include "Dependencies\GL\freeglut.h"
+#include "OpenGLApplication\Dependencies\GL\glew.h"
+#include "OpenGLApplication\Dependencies\GL\freeglut.h"
 
 
 

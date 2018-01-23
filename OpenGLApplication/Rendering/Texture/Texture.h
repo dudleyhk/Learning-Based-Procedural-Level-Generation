@@ -6,14 +6,14 @@
 #pragma once
 #include <string>
 
-
+#include "../IGameObject.h"
 
 
 namespace Rendering
 {
 	namespace Textures
 	{
-		class Texture
+		class Texture : public IGameObject
 		{
 		public:
 			Texture()  = default;

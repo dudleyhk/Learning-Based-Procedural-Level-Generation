@@ -7,8 +7,8 @@
 #include <string>
 #include <map>
 
-#include "Dependencies\GL\glew.h"
-#include "Dependencies\GL\freeglut.h"
+#include "..\Dependencies\GL\glew.h"
+#include "..\Dependencies\GL\freeglut.h"
 
 
 namespace Managers

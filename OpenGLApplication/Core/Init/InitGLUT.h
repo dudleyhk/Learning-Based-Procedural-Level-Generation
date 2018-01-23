@@ -7,7 +7,7 @@
 #include <iostream>
 #include <memory>
 
-#include "Core\Core\IListener.h"
+#include "..\Core\IListener.h"
 #include "ContextInfo.h"
 #include "FrameBufferInfo.h"
 #include "WindowInfo.h"

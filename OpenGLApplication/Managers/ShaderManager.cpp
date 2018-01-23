@@ -7,10 +7,13 @@
 #include <fstream>
 #include <vector>
 
+#include "..\Core\Core\ContainerUtilities.h"
+
 #include "ShaderManager.h"
-#include "Core\Core\ContainerUtilities.h"
+
 
 using namespace Managers;
+
 
 
 std::map<std::string, GLuint> ShaderManager::programs;

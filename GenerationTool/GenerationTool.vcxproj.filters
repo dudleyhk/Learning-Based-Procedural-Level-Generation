@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generation System">
+      <UniqueIdentifier>{8df7f0ad-cb74-4eb8-afdf-17d883f700ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing System">
+      <UniqueIdentifier>{dde30e39-5e49-4490-a34d-1dba5c5d5b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{0a25e9a0-bdd7-461c-bd2e-236beae14f88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Init.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Init.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

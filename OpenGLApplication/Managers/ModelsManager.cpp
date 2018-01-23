@@ -3,10 +3,10 @@
 
 
 */
-#include "Core/Core/ContainerUtilities.h"
-#include "ModelsManager.h"
+#include "..\Core\Core\ContainerUtilities.h"
+#include "..\Rendering\Texture\Texture.h"
 
-#include "Rendering\Texture\Texture.h"
+#include "ModelsManager.h"
 
 using namespace Managers;
 using namespace Rendering;

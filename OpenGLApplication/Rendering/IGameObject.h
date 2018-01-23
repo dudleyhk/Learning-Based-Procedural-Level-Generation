@@ -7,9 +7,8 @@
 #include <vector>
 #include <iostream>
 
-#include "Dependencies/GL/glew.h"
-#include "Dependencies/GL/freeglut.h"
-
+#include "..\Dependencies\GL\glew.h"
+#include "..\Dependencies\GL\freeglut.h"
 
 #include "VertexFormat.h"
 

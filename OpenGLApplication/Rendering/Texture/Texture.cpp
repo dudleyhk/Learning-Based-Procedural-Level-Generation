@@ -6,17 +6,11 @@
 #include <iostream>
 #include <string>
 
-#include "Dependencies\GL\freeglut.h"
-#include "Dependencies\GL\glut.h"
-
 #include "Texture.h"
 
 #define TEXTURE_LOAD_ERROR 0;
 
 using namespace Rendering::Textures;
-
-
-
 
 GLuint Texture::LoadTexture(const std::string& filename, const int& width, const int& height)
 {

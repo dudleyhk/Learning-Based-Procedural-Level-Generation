@@ -4,17 +4,14 @@
 
 */
 #pragma once
-
-
-#pragma once
 #include <map>
 #include <memory>
 
-#include "ShaderManager.h"
-#include "Rendering/IGameObject.h"
-#include "Rendering/Models/Triangle.h"
-#include "Rendering/Models/Quad.h"
+#include "..\Rendering\IGameObject.h"
+#include "..\Rendering\Models\Triangle.h"
+#include "..\Rendering\Models\Quad.h"
 
+#include "ShaderManager.h"
 
 namespace Managers
 {
