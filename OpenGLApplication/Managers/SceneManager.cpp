@@ -5,9 +5,12 @@
 */
 #include <fstream>
 
+#include "../Dependencies/SOIL2/SOIL2.h"
+
 #include "GenerationTool\Core\Init.h"
 
 #include "SceneManager.h"
+
 
 
 
@@ -26,7 +29,6 @@ SceneManager::SceneManager()
 								  "Shaders\\FragmentShaders\\FragmentShader.glsl");
 
 	models_manager = std::make_unique<ModelsManager>();
-
 }
 
 
@@ -37,6 +39,16 @@ void SceneManager::NotifyBeginFrame()
 	// TODO: Create an interface class to handle the Parsing and Generation
 	GenerationTool::Core::Init init;
 	init.ReadWriteExample();
+
+	int width;
+	int height;
+
+	//https://www.youtube.com/watch?v=RnXDUFq7T6A
+	unsigned char* image = SOIL_load_image("..Resorces//mario1-1.png", &width, &height,0, SOIL_LOAD_RGBA);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
+	glGenerateMipmap(GL_TEXTURE_2D);
+	SOIL_free_image_data(image);
+	glBindTexture(GL_TEXTURE_2D, 0);
 
 }
 

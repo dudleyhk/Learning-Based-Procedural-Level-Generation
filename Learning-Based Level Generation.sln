@@ -8,12 +8,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLApplication", "OpenGL
 		{1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8} = {1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSVManager", "CSVManager\CSVManager.vcxproj", "{B83654EE-E090-4EAB-8834-8C52639B8175}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GenerationTool", "GenerationTool\GenerationTool.vcxproj", "{1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B83654EE-E090-4EAB-8834-8C52639B8175} = {B83654EE-E090-4EAB-8834-8C52639B8175}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +26,6 @@ Global
 		{6041CB75-A044-4F66-87AB-70FFB8F0C306}.Release|x64.Build.0 = Release|x64
 		{6041CB75-A044-4F66-87AB-70FFB8F0C306}.Release|x86.ActiveCfg = Release|Win32
 		{6041CB75-A044-4F66-87AB-70FFB8F0C306}.Release|x86.Build.0 = Release|Win32
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Debug|x64.ActiveCfg = Debug|x64
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Debug|x64.Build.0 = Debug|x64
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Debug|x86.ActiveCfg = Debug|Win32
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Debug|x86.Build.0 = Debug|Win32
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Release|x64.ActiveCfg = Release|x64
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Release|x64.Build.0 = Release|x64
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Release|x86.ActiveCfg = Release|Win32
-		{B83654EE-E090-4EAB-8834-8C52639B8175}.Release|x86.Build.0 = Release|Win32
 		{1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8}.Debug|x64.ActiveCfg = Debug|x64
 		{1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8}.Debug|x64.Build.0 = Debug|x64
 		{1E55DA88-B8C4-44F4-AC8D-A25E3A1A54E8}.Debug|x86.ActiveCfg = Debug|Win32

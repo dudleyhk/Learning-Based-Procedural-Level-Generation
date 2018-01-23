@@ -10,15 +10,42 @@
     <Filter Include="Core">
       <UniqueIdentifier>{0a25e9a0-bdd7-461c-bd2e-236beae14f88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CSV">
+      <UniqueIdentifier>{d4456d94-2743-4640-b1ec-b1b950409d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSV\Header Files">
+      <UniqueIdentifier>{159b30d4-7a2c-464d-9106-617baabddfde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSV\Source Files">
+      <UniqueIdentifier>{93cefeeb-8858-4ae0-984f-7d13b562c4c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Init.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="CSV\CSVReadIterator.cpp">
+      <Filter>CSV\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSV\CSVRow.cpp">
+      <Filter>CSV\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSV\CSVWrite.cpp">
+      <Filter>CSV\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Init.h">
       <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CSV\CSVReadIterator.h">
+      <Filter>CSV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSV\CSVRow.h">
+      <Filter>CSV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSV\CSVWrite.h">
+      <Filter>CSV\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

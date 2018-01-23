@@ -3,14 +3,13 @@
 
 
 */
-#pragma comment (lib, "CSVManager.lib") 
-
 #include <iostream> // TODO: If in Debug Mode - Log to output window.
 
-#include "CSVCore/CSVReadIterator.h"
-#include "CSVCore/CSVWrite.h"
+#include "..\CSV\CSVReadIterator.h"
+#include "..\CSV\CSVWrite.h"
 
 #include "Init.h"
+
 
 using namespace GenerationTool::Core;
 
