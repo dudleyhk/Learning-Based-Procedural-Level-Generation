@@ -14,5 +14,5 @@ void main()
 	colour = in_colour;
 
 	// Do this because most images y coords are inverted with openGL.
-	texCoord    = vec2(in_texCoord.x, 1.0 - in_texCoord.y);
+	texCoord    = in_texCoord; //vec2(in_texCoord.x, 1.0 - in_texCoord.y);
 }

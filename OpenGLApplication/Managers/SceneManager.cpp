@@ -5,14 +5,15 @@
 */
 #include <fstream>
 
-#include "../Dependencies/SOIL2/SOIL2.h"
+//#include "../Dependencies/SOIL2/SOIL2.h"
 
 #include "GenerationTool\Core\Init.h"
 
 #include "SceneManager.h"
 
 
-
+#define STB_IMAGE_IMPLEMENTATION
+#include "../Dependencies/STB/stb_image.h"
 
 
 
@@ -30,6 +31,7 @@ SceneManager::SceneManager()
 		return;
 	}
 
+	// TODO: Run this directly through the shader manager
 	shader_manager->CreateProgram("ColourShader",
 								  "Shaders\\VertexShaders\\",   "VertexShader",
 								  "Shaders\\FragmentShaders\\", "FragmentShader");
@@ -47,35 +49,36 @@ SceneManager::SceneManager()
 		return;
 	}
 
-
-
-	//https://www.youtube.com/watch?v=RnXDUFq7T6A
-	
-
-	int width;
-	int height;
-
+	// TODO: Create a texture loading class (this could be something todo with ModelManager).
 	glGenTextures(1, &texture);
 	glBindTexture(GL_TEXTURE_2D, texture);
 
+	int width, height, nrChannels;
+
+	//TODO: Error check data
+	unsigned char *data = stbi_load("..//Resources//mario1-1.png", &width, &height, &nrChannels, 0);
+
+	//stbi_info
+
+
+	// set the texture wrapping/filtering options (on the currently bound texture object)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-	auto image = SOIL_load_image("..//Resources//mario1-1.png", &width, &height, 0, SOIL_LOAD_RGBA);
-	if(!image)
+	if(data)
 	{
-		std::cout << "ERROR: Image location invalid" << std::endl;
-		return;
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
 	}
+	else
+	{
+		std::cout << "ERROR: Failed to load texture" << std::endl;
+	}
+	stbi_image_free(data);
 
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
-	glGenerateMipmap(GL_TEXTURE_2D);
-	SOIL_free_image_data(image);
-	glBindTexture(GL_TEXTURE_2D, 0);
-
+	// TODO: Output image loaded details in TextureManager
 }
 
 
@@ -95,30 +98,7 @@ void SceneManager::NotifyDisplayFrame()
 
 
 
-
-
-	auto program = shader_manager->GetShader("TextureShader");
-	if(program < 0)
-	{
-		std::cout << "ERROR: Invalid shader name" << std::endl;
-		return;
-	}
-
-	auto intex_loc = glGetUniformLocation(program, "in_texture");
-	if(intex_loc != GLEW_OK)
-	{
-		std::cout << "ERROR getting uniform location of texture" << std::endl;
-		return;
-	}
-
-	glUseProgram(program);
-	glUniform1i(intex_loc, 0);
-
-	glActiveTexture(GL_TEXTURE0 + 0);
 	glBindTexture(GL_TEXTURE_2D, texture);
-	//glBindSampler(0, GL_LINEAR);
-
-
 	models_manager->Draw();
 }
 

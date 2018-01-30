@@ -29,8 +29,6 @@ namespace Managers
 								  int previousWidth, int previousHeight);
 
 	private:
-
-		// TODO: Tidy into own class
 		GLuint texture;
 
 		std::unique_ptr<Managers::ShaderManager> shader_manager = nullptr;
