@@ -19,7 +19,7 @@ void InitGLUT::Init(const Core::WindowInfo& windowInfo, const Core::ContextInfo&
 	char* fake_argv[] = {"fake", nullptr };
 	glutInit(&fake_argc, fake_argv);
 
-window_information = windowInfo;
+	window_information = windowInfo;
 
 	if(contextInfo.core)
 	{

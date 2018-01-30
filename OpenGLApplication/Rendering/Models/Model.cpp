@@ -43,6 +43,7 @@ const std::vector<GLuint>& Model::GetVbos() const
 void Model::Destroy()
 {
 	glDeleteVertexArrays(1, &vao);
+	glDeleteBuffers(1, &ebo);
 	glDeleteBuffers(vbos.size(), &vbos[0]);
 	vbos.clear();
 }

@@ -29,11 +29,14 @@ void Triangle::Create()
 
 	std::vector<VertexFormat> vertices;
 	vertices.push_back(VertexFormat(glm::vec3(0.25, -0.25, 0.0),
-									glm::vec4(1, 0, 0, 1)));
+									glm::vec4(1, 0, 0, 1), 
+									glm::vec2(1, 1)));
 	vertices.push_back(VertexFormat(glm::vec3(-0.25, -0.25, 0.0),
-									glm::vec4(0, 1, 0, 1)));
+									glm::vec4(0, 1, 0, 1),
+									glm::vec2(1, 0)));
 	vertices.push_back(VertexFormat(glm::vec3(0.25, 0.25, 0.0),
-									glm::vec4(0, 0, 1, 1)));
+									glm::vec4(0, 0, 1, 1),
+									glm::vec2(0, 0)));
 
 	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
@@ -44,7 +47,7 @@ void Triangle::Create()
 	glEnableVertexAttribArray(1);
 	// you can use offsetof to get the offset of an attribute
 	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(VertexFormat),
-		(void*)(offsetof(VertexFormat, VertexFormat::colour)));
+		(void*)(offsetof(VertexFormat, VertexFormat::uv)));
 	glBindVertexArray(0);
 
 	//here we assign the values

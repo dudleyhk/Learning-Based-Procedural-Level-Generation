@@ -15,19 +15,15 @@ using namespace Rendering;
 
 ModelsManager::ModelsManager()
 {
-	
-	Models::Triangle* triangle = new Models::Triangle();
-	triangle->SetProgram(ShaderManager::GetShader("ColourShader"));
-	triangle->Create();
-	gameModels["Triangle"].reset(triangle);
+	//Models::Triangle* triangle = new Models::Triangle();
+	//triangle->SetProgram(ShaderManager::GetShader("ColourShader"));
+	//triangle->Create();
+	//gameModels["Triangle"].reset(triangle);
 
 	Models::Quad* quad = new Models::Quad();
-	quad->SetProgram(ShaderManager::GetShader("ColourShader"));
+	quad->SetProgram(ShaderManager::GetShader("TextureShader"));
 	quad->Create();
 	gameModels["Quad"].reset(quad);
-
-	//Textures::Texture textureLoader;
-	//textureLoader.LoadTexture("..\\Resources\\mario1-1.png", 10, 5);
 }
 
 

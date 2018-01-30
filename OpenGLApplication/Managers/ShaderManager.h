@@ -19,7 +19,14 @@ namespace Managers
 		ShaderManager() = default;
 		~ShaderManager();
 
-		void CreateProgram(const std::string& shaderName, const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename);
+		/* Create a vertex and fragment shader using default .glsl extension */
+		void CreateProgram(const std::string& shaderName, 
+						   const std::string& vertexShaderPath,
+						   const std::string& vertexShaderFilename,
+						   const std::string& fragmentShaderPath, 
+						   const std::string& fragmentShaderFilename,
+						   const std::string& extension = ".glsl");
+
 		static const GLuint GetShader(const std::string& shaderName);
 		// TODO: DeleteShader function
 

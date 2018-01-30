@@ -31,6 +31,7 @@ namespace Rendering
 
 		protected:
 			GLuint vao;
+			GLuint ebo; // TODO: Work out if this needs to be in a vector as well.
 			GLuint program;
 			std::vector<GLuint> vbos;
 		};

@@ -33,14 +33,19 @@ ShaderManager::~ShaderManager()
 
 
 
-void ShaderManager::CreateProgram(const std::string& shaderName, const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename)
+void ShaderManager::CreateProgram(const std::string& shaderName, 
+								  const std::string& vertexShaderPath,
+								  const std::string& vertexShaderFilename,
+								  const std::string& fragmentShaderPath, 
+								  const std::string& fragmentShaderFilename,
+								  const std::string& extension)
 {
 	// read the shader files and save the code. 
-	std::string vertex_shader_code   = ReadShader(vertexShaderFilename);
-	std::string fragment_shader_code = ReadShader(fragmentShaderFilename);
+	std::string vertex_shader_code   = ReadShader(vertexShaderPath + vertexShaderFilename + extension);
+	std::string fragment_shader_code = ReadShader(fragmentShaderPath + fragmentShaderFilename + extension);
 
-	GLuint vertex_shader   = CreateShader(GL_VERTEX_SHADER,   vertex_shader_code,   "VertexShader");
-	GLuint fragment_shader = CreateShader(GL_FRAGMENT_SHADER, fragment_shader_code, "FragmentShader");
+	GLuint vertex_shader   = CreateShader(GL_VERTEX_SHADER,   vertex_shader_code,   vertexShaderFilename);
+	GLuint fragment_shader = CreateShader(GL_FRAGMENT_SHADER, fragment_shader_code, fragmentShaderFilename);
 
 	// create the program handle, attach the shaders and link it.
 	int link_result = 0;

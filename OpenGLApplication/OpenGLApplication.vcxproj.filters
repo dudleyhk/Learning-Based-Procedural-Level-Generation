@@ -143,5 +143,11 @@
     <None Include="Shaders\VertexShaders\VertexShader.glsl">
       <Filter>Shaders\Vertex Shader</Filter>
     </None>
+    <None Include="Shaders\VertexShaders\TextureShaderVS.glsl">
+      <Filter>Shaders\Vertex Shader</Filter>
+    </None>
+    <None Include="Shaders\FragmentShaders\TextureShaderFS.glsl">
+      <Filter>Shaders\Fragment Shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

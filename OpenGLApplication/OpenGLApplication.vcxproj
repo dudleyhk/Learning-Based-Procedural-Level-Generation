@@ -184,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\FragmentShaders\FragmentShader.glsl" />
+    <None Include="Shaders\FragmentShaders\TextureShaderFS.glsl" />
+    <None Include="Shaders\VertexShaders\TextureShaderVS.glsl" />
     <None Include="Shaders\VertexShaders\VertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
